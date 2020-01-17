@@ -15,7 +15,7 @@ variable "number_of_instances" {
 
 
 module "elb" {
-  source  = "app.terraform.io/kcorbin/consumer-elb/aws"
+  source  = "app.terraform.io/p-devops/consumer-elb/aws"
   version = "1.24.0"
   name = "${var.name}-elb"
   environment = "${var.environment}"
@@ -25,7 +25,7 @@ module "elb" {
 }
 
 module "ec2_instances" {
-  source = "app.terraform.io/kcorbin/consumer-ec2-instance/aws"
+  source = "app.terraform.io/p-devops/consumer-ec2-instance/aws"
   version = "1.7.2"
   name                        = "${var.name}-ec2"
   instance_count = "${var.number_of_instances}"
