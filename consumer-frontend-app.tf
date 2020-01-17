@@ -26,7 +26,7 @@ module "elb" {
 
 module "ec2_instances" {
   source = "app.terraform.io/p-devops/consumer-ec2-instance/aws"
-  version = "1.7.2"
+  version = "1.24.0"
   name                        = "${var.name}-ec2"
   instance_count = "${var.number_of_instances}"
 
