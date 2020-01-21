@@ -18,7 +18,7 @@ module "consumer_elb" {
   version = "1.24.0"
 
   environment = "${var.environment}"
-  instances = "${module.consumer_ec2_instance.id"
-  name = "p-devops-ELB"
+  instances = "${module.consumer_ec2_instance.id}"
+  name = "p-devops-elb"
   number_of_instances = 2
 }
